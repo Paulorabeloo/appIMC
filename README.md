@@ -27,5 +27,8 @@ O peso e a altura são convertidos para valores numéricos (dois decimais) e uti
 
 Se os valores inseridos pelo usuário não forem válidos (não numéricos ou nulos), o aplicativo exibe uma mensagem solicitando a inserção de valores válidos.
 
-![image](https://github.com/user-attachments/assets/3532c453-a215-4b76-829e-bb2cd328541b) ![image](https://github.com/user-attachments/assets/d0f623a0-282d-48c5-a3e7-27c2ece04f58)
+![image](https://github.com/user-attachments/assets/3532c453-a215-4b76-829e-bb2cd328541b) ![image](https://github.com/user-attachments/assets/73eb5c10-b407-4984-9658-01c70e72659d) ![image](https://github.com/user-attachments/assets/4167e5ae-3a91-48ef-9d03-cbd1f9f45034)
+
+
+
 
