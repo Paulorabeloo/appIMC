@@ -1,6 +1,7 @@
 package com.example.appimc
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -31,20 +32,29 @@ class MainActivity : AppCompatActivity() {
             val tamanhoPeso = editPeso.text.toString().toDoubleOrNull()
             val tamanhoAltura = editAltura.text.toString().toDoubleOrNull()
 
-            if (tamanhoPeso != null && tamanhoAltura != null) {
-                val resultado = tamanhoPeso / (tamanhoAltura * tamanhoAltura)
+            if (tamanhoPeso != null && tamanhoAltura !=null){
 
-                textoResultado.text = when {
-                    resultado < 18.5 -> "Abaixo do Peso"
-                    resultado in 18.5..24.9 -> "Peso Normal"
-                    resultado in 25.0..29.9 -> "Sobrepeso"
-                    resultado in 30.0..34.9 -> "Obesidade"
-                    resultado in 35.0..39.9 -> "Obesidade Grau II"
-                    else -> "Obesidade Grau III"
+                val resultado = tamanhoPeso / (tamanhoAltura*tamanhoAltura)
+
+                if (resultado < 18.5){
+                    textoResultado.text = "Abaixo do Peso"
+                } else if (resultado >= 18.5 && resultado <= 24.9){
+                    textoResultado.text = "Peso Normal"
+                }else if (resultado >= 25 && resultado <= 29.9 ){
+                    textoResultado.text = "Sobrepeso"
+                }else if (resultado >= 30 && resultado <= 34.9){
+                    textoResultado.text = "Obesidade"
+                }else if (resultado >= 35 && resultado <= 39.9){
+                    textoResultado.text = "Obesidade Grau II"
+                }else if (resultado > 40){
+                    textoResultado.text = "Obesidade Grau III"
                 }
-            } else {
+
+            }else {
                 textoResultado.text = "Por favor, insira valores válidos"
+
             }
         }
+
     }
 }
